@@ -1,0 +1,175 @@
+.page {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-sky) 0%, #004994 100%);
+  color: white;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.heroCTA {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button,
+.buttonSecondary {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button {
+  background-color: var(--color-gold);
+  color: white;
+}
+
+.button:hover {
+  background-color: #b87c1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 150, 42, 0.3);
+}
+
+.buttonSecondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.buttonSecondary:hover {
+  background-color: white;
+  color: var(--color-sky);
+}
+
+.about {
+  background-color: var(--color-steppe);
+  padding: 4rem 1.5rem;
+}
+
+.about h2 {
+  text-align: center;
+  color: var(--color-sky);
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-dark);
+}
+
+.quickLinks {
+  padding: 4rem 1.5rem;
+}
+
+.quickLinks h2 {
+  text-align: center;
+  color: var(--color-sky);
+  margin-bottom: 3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: var(--color-sky);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.card a {
+  color: var(--color-gold);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: var(--color-sky);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 40vh;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .about,
+  .quickLinks {
+    padding: 2.5rem 1rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,149 @@
+/* CSS Variables */
+:root {
+  --color-sky: #0066B3;
+  --color-steppe: #f5f0e8;
+  --color-gold: #c8962a;
+  --color-red: #DA2032;
+  --color-green: #27ae60;
+  --color-dark: #1a1a1a;
+  --color-muted: #666666;
+  --color-editorial-text: #333333;
+
+  /* Typography */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --font-mn: 'Noto Sans Mongolian', system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-base: 0.5rem;
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: white;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-sky);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-gold);
+}
+
+/* Cyrillic Text */
+[lang='mn'],
+.mn {
+  font-family: var(--font-mn);
+  word-spacing: 0.15em;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
