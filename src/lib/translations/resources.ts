@@ -6,7 +6,7 @@ export const resourcesT = {
   introduction: {
     heading: {
       en: 'What is Mongolian Archery?',
-      mn: 'Монгол нумын сум гэж юу вэ?',
+      mn: 'Монгол нум сум гэж юу вэ?',
     },
     content: {
       en: 'Mongolian archery (нум сум) is one of the "Three Games of Men" at the Naadam festival, an ancient competition that celebrates the warrior heritage of Mongolia. It is rooted in the horseback archery traditions of Mongolian warriors dating back centuries, and continues to thrive today as both a sport and a cultural practice. The discipline emphasizes precision, control, and the deep connection between archer and bow that defined Mongolia\'s military prowess. Practitioners of all ages and backgrounds are invited to learn this timeless art form.',
@@ -33,9 +33,9 @@ export const resourcesT = {
       },
     },
     thumbRing: {
-      heading: { en: 'Thumb Ring (Тонуу)', mn: 'Эргэх цагираг (Тонуу)' },
+      heading: { en: 'Thumb Ring (Erkhiivch/Эрхийвч)', mn: 'Эрхийвч' },
       content: {
-        en: 'The distinctive Mongolian draw technique uses a thumb ring (called the тонуу) instead of the three-finger Mediterranean draw used in Western archery. The archer nocks the arrow on the outside of the bow, then uses the thumb ring to pull the bowstring back with the thumb in a hooking motion. This technique allows for greater force application and more consistent draw weight, enabling superior accuracy. The thumb ring protects the archer\'s hand and distributes the force more evenly across the hand and arm.',
+        en: 'The distinctive Mongolian draw technique uses a thumb ring (called Erkhiivch/Эрхийвч) instead of the three-finger Mediterranean draw used in Western archery. The archer nocks the arrow on the outside of the bow, then uses the thumb ring to pull the bowstring back with the thumb in a hooking motion. This technique allows for greater force application and more consistent draw weight, enabling superior accuracy. The thumb ring protects the archer\'s hand and distributes the force more evenly across the hand and arm.',
         mn: 'Монгол шалаах аргын төрөл хөл нь гурван хуруугаар хөлөлдөх үүрэг гүйцэтгэхийн оронд эрхий хуруугаар цагираг ашиглана.',
       },
     },
