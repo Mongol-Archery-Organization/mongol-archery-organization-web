@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser (given that port 3000 is open).
 
 ### Building
 
@@ -45,7 +45,7 @@ This generates a fully static `/out` directory ready for deployment.
 
 ## Language System
 
-The site uses React Context to manage the active language globally. Users toggle between **English** and **Монгол** (Mongolian Cyrillic) using tabs in the navigation bar. The selection persists across page navigation.
+The site uses React Context to manage the active language globally. Users toggle between **English** and **Монгол Хэл** (Mongolian Cyrillic) using tabs in the navigation bar. The selection persists across page navigation.
 
 ### Translation Files
 

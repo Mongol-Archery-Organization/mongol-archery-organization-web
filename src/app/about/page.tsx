@@ -46,7 +46,7 @@ export default function AboutPage() {
           </section>
 
           {/* How to Join */}
-          <section className={styles.section}>
+          <section className={styles.section} id="how-to-join">
             <h2>{aboutT.join.heading[lang]}</h2>
             <p>{aboutT.join.content[lang]}</p>
             <div className={styles.contact}>

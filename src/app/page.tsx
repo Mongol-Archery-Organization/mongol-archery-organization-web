@@ -16,7 +16,7 @@ export default function HomePage() {
           <h1 className={styles.heroTitle}>{homeT.hero.title[lang]}</h1>
           <p className={styles.heroSubtitle}>{homeT.hero.subtitle[lang]}</p>
           <div className={styles.heroCTA}>
-            <Link href="/about/" className={styles.button}>
+            <Link href="/about/#how-to-join" className={styles.button}>
               {homeT.hero.ctaJoin[lang]}
             </Link>
             <Link href="/schedule/" className={styles.buttonSecondary}>

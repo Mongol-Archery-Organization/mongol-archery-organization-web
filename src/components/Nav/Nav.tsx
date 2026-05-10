@@ -36,19 +36,19 @@ export function Nav() {
           </Link>
           <Link
             href="/about/"
-            className={pathname === '/about' ? styles.activeLink : styles.link}
+            className={pathname === '/about/' ? styles.activeLink : styles.link}
           >
             {commonT.nav.about[lang]}
           </Link>
           <Link
             href="/schedule/"
-            className={pathname === '/schedule' ? styles.activeLink : styles.link}
+            className={pathname === '/schedule/' ? styles.activeLink : styles.link}
           >
             {commonT.nav.schedule[lang]}
           </Link>
           <Link
             href="/resources/"
-            className={pathname === '/resources' ? styles.activeLink : styles.link}
+            className={pathname === '/resources/' ? styles.activeLink : styles.link}
           >
             {commonT.nav.resources[lang]}
           </Link>
