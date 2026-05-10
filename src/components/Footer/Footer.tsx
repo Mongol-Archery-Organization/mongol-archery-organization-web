@@ -24,7 +24,7 @@ export function Footer() {
             {lang === 'en' ? 'Connect' : 'Холбогдох'}
           </h4>
           <a
-            href="https://www.facebook.com/share/g/1FdLcgKdCs/"
+            href="https://www.facebook.com/groups/775977682511303"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
