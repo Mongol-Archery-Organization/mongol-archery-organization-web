@@ -9,16 +9,16 @@ import styles from './page.module.css';
 type Section = 'introduction' | 'equipment' | 'techniques' | 'getting' | 'cultural';
 
 const sections: { id: Section; labelKey: string }[] = [
+  { id: 'getting', labelKey: 'getting' },
   { id: 'introduction', labelKey: 'introduction' },
+  { id: 'cultural', labelKey: 'cultural' },
   { id: 'equipment', labelKey: 'equipment' },
   { id: 'techniques', labelKey: 'techniques' },
-  { id: 'getting', labelKey: 'getting' },
-  { id: 'cultural', labelKey: 'cultural' },
 ];
 
 export default function ResourcesPage() {
   const { lang } = useLang();
-  const [activeSection, setActiveSection] = useState<Section>('introduction');
+  const [activeSection, setActiveSection] = useState<Section>('getting');
 
   const getNavLabel = (labelKey: string): string => {
     const labels: Record<Section, string> = {

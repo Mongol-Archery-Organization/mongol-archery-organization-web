@@ -9,8 +9,8 @@ export const aboutT = {
       mn: 'Манай зорилго',
     },
     content: {
-      en: 'To preserve and promote the ancient tradition of Mongolian archery while building a vibrant, welcoming community for practitioners of all levels.',
-      mn: 'Монгол нумын эртний уламжлалыг хадгалж, түлхүүлэх, мөн бүх түвшний сургаачдын төлөө чөлөөтэй орчин бүтээх.',
+      en: 'Our Mission Context: TODO',
+      mn: 'Манай зорилго context: TODO',
     },
   },
   history: {
@@ -19,32 +19,32 @@ export const aboutT = {
       mn: 'Манай түүх',
     },
     content: {
-      en: 'Founded to connect Mongolian archery enthusiasts and share this cultural heritage. We practice traditional techniques and participate in events that celebrate our roots.',
-      mn: 'Монгол нумын сонирхогчдыг нэгтгэж, энэ соёлын өвийг хуваалцах зориулалтаар байгуулагдсан. Бид уламжлалт техникүүдийг сургалт хийж, манай үндэсийг өмсөглөдөг үйл ажиллагаанд оролцдог.',
+      en: 'Our History Context: TODO',
+      mn: 'Манай түүх context: TODO',
     },
   },
   disciplines: {
     heading: {
       en: 'What We Practice',
-      mn: 'Мэргэжлүүд',
+      mn: 'Бид юугаар хичээллэдэг вэ',
     },
     intro: {
-      en: 'Mongolian archery encompasses several disciplines:',
-      mn: 'Монгол нум нь хэд хэдэн сургалтын салбарыг агуулдаг:',
+      en: 'What We Practice Context: TODO',
+      mn: 'Бид юугаар хичээллэдэг вэ context: TODO',
     },
     items: [
       {
         name: { en: 'Hana Harvaa', mn: 'Хана Харваа' },
         description: {
-          en: 'Traditional target archery with distance and accuracy focus.',
-          mn: 'Зай ба нарийвчлалыг чинчлэдэг уламжлалт зорилтот нум.',
+          en: 'Hana Harvaa context: TODO',
+          mn: 'Хана Харваа context: TODO',
         },
       },
       {
         name: { en: 'Hasaa Harvaa', mn: 'Хасаа Харваа' },
         description: {
-          en: 'Stacked target shooting, the form featured at Naadam festival.',
-          mn: 'Наадмын наймдугаар сарын үйлчилгээнд оролцож буй давхарласан эвшээхүйн нум.',
+          en: 'Hasaa Harvaa context: TODO',
+          mn: 'Хасаа Харваа context: TODO',
         },
       },
     ],
@@ -55,8 +55,8 @@ export const aboutT = {
       mn: 'Хэрхэн нэгдэх вэ',
     },
     content: {
-      en: 'Visit us at our Sunday practice sessions. No experience necessary. Contact us with any questions.',
-      mn: 'Бидний Ням гарагийн сургалтын үе үе ирнүүлээрэй. Ямар ч туршлага шаардлагагүй. Ямар ч асуулт байвал бидэнтэй холбоо барина уу.',
+      en: 'How to Join Context: TODO',
+      mn: 'Хэрхэн нэгдэх вэ context: TODO',
     },
     facebook: {
       en: 'Facebook:',
