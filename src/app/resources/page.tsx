@@ -19,6 +19,7 @@ const sections: { id: Section; labelKey: string }[] = [
 export default function ResourcesPage() {
   const { lang } = useLang();
   const [activeSection, setActiveSection] = useState<Section>('getting');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const getNavLabel = (labelKey: string): string => {
     const labels: Record<Section, string> = {
@@ -29,6 +30,11 @@ export default function ResourcesPage() {
       cultural: resourcesT.cultural.heading[lang],
     };
     return labels[labelKey as Section] || '';
+  };
+
+  const handleSectionChange = (section: Section) => {
+    setActiveSection(section);
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -45,14 +51,25 @@ export default function ResourcesPage() {
       </section>
 
       <section className={styles.layoutSection}>
+        {/* Hamburger Menu Button (Mobile Only) */}
+        <button
+          className={styles.hamburgerBtn}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         {/* Sidebar */}
-        <aside className={styles.sidebar}>
+        <aside className={`${styles.sidebar} ${mobileMenuOpen ? styles.mobileOpen : ''}`}>
           <nav className={styles.sidebarNav}>
             {sections.map((section) => (
               <button
                 key={section.id}
                 className={`${styles.navItem} ${activeSection === section.id ? styles.active : ''}`}
-                onClick={() => setActiveSection(section.id)}
+                onClick={() => handleSectionChange(section.id)}
               >
                 {getNavLabel(section.labelKey)}
               </button>
