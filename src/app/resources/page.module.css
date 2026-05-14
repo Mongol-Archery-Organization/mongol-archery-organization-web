@@ -3,6 +3,11 @@
   background-color: white;
 }
 
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburgerBtn {
+  display: none;
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--color-sky) 0%, #004994 100%);
@@ -205,6 +210,33 @@
 
   .layoutSection {
     flex-direction: column;
+    position: relative;
+  }
+
+  .hamburgerBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+  }
+
+  .hamburgerBtn span {
+    width: 24px;
+    height: 3px;
+    background-color: var(--color-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburgerBtn:hover span {
+    background-color: var(--color-sky);
   }
 
   .sidebar {
@@ -212,47 +244,59 @@
     border-right: none;
     border-bottom: none;
     padding: 0;
-    position: static;
-    top: auto;
-    background-color: transparent;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
     margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.mobileOpen {
+    max-height: 400px;
   }
 
   .sidebarNav {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0;
     padding: 1.5rem 1.5rem;
     border-bottom: 1px solid #e5e5e5;
   }
 
   .navItem {
-    padding: 0;
+    padding: 0.75rem 0;
     padding-left: 0;
     border-left: none;
-    border-bottom: 2px solid transparent;
+    border-bottom: none;
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 0;
+    text-align: left;
   }
 
   .navItem:hover {
     border-left: none;
-    border-bottom-color: var(--color-gold);
+    border-bottom-color: transparent;
     background-color: transparent;
     color: var(--color-sky);
   }
 
   .navItem.active {
     border-left: none;
-    border-bottom-color: var(--color-gold);
+    border-bottom-color: transparent;
     background-color: transparent;
     color: var(--color-dark);
+    font-weight: 600;
   }
 
   .mainContent {
     padding: 2rem 1.5rem;
+    margin-top: 60px;
   }
 
   .section {
