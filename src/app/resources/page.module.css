@@ -50,7 +50,7 @@
   border-right: none;
   padding: 3rem 0 2rem 0;
   position: sticky;
-  top: 80px;
+  top: 120px;
   height: fit-content;
   flex-shrink: 0;
 }
@@ -64,11 +64,12 @@
 .navItem {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.5rem 1rem;
+  min-height: 44px;
   margin: 0;
   text-align: left;
   font-size: 0.875rem;
-  color: #999999;
+  color: var(--color-muted);
   cursor: pointer;
   transition: color 0.25s ease;
   border-left: 3px solid transparent;
@@ -93,6 +94,7 @@
 /* Main Content Area */
 .mainContent {
   flex: 1;
+  min-width: 0;
   padding: 5rem 5rem;
   background-color: white;
   color: var(--color-editorial-text);
@@ -215,88 +217,49 @@
 
   .hamburgerBtn {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 1rem 1.5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-  }
-
-  .hamburgerBtn span {
-    width: 24px;
-    height: 3px;
-    background-color: var(--color-dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .hamburgerBtn:hover span {
-    background-color: var(--color-sky);
-  }
-
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: none;
-    padding: 0;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: white;
-    margin-bottom: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .sidebar.mobileOpen {
-    max-height: 400px;
-  }
-
-  .sidebarNav {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 1.5rem 1.5rem;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  .navItem {
-    padding: 0.75rem 0;
-    padding-left: 0;
-    border-left: none;
-    border-bottom: none;
-    white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 0.75rem 1rem;
+    min-height: 48px;
+    background: var(--color-steppe);
+    color: var(--color-sky);
+    border: 1px solid #d9cdb9;
+    border-radius: 0.35rem;
     font-size: 1rem;
-    margin-bottom: 0;
+    font-weight: 600;
     text-align: left;
   }
 
-  .navItem:hover {
-    border-left: none;
-    border-bottom-color: transparent;
-    background-color: transparent;
-    color: var(--color-sky);
+  .sidebar {
+    display: none;
+    width: auto;
+    padding: 0 1rem 1rem;
+    position: static;
+  }
+
+  .sidebar.mobileOpen {
+    display: block;
+  }
+
+  .sidebarNav {
+    gap: 0.25rem;
+  }
+
+  .navItem {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    white-space: normal;
   }
 
   .navItem.active {
-    border-left: none;
-    border-bottom-color: transparent;
-    background-color: transparent;
-    color: var(--color-dark);
-    font-weight: 600;
+    background-color: var(--color-steppe);
   }
 
   .mainContent {
-    padding: 2rem 1.5rem;
-    margin-top: 60px;
+    padding: 1rem;
+    scroll-margin-top: 15rem;
   }
 
   .section {
@@ -316,5 +279,132 @@
   .subsection p {
     font-size: 0.95rem;
     line-height: 1.7;
+  }
+}
+
+.styleCard {
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background: var(--color-steppe);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0.35rem;
+}
+
+.styleCard h3 {
+  font-size: 1.4rem;
+  color: var(--color-sky);
+}
+
+.styleCard p:last-child {
+  margin-bottom: 0;
+}
+
+.distanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 0.95rem;
+}
+
+.distanceTable caption {
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.distanceTable th,
+.distanceTable td {
+  text-align: left;
+  padding: 0.9rem 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.distanceTable thead {
+  background: var(--color-sky);
+  color: white;
+}
+
+.distanceTable tbody tr:nth-child(even) {
+  background: var(--color-steppe);
+}
+
+.dimensions li {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.decree {
+  border-top: 4px solid var(--color-gold);
+  padding-top: 2rem;
+}
+
+.decreeHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.decreeHeader h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  line-height: 1.4;
+}
+
+.decreeMeta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  color: var(--color-muted);
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.decreeHeader h3 {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.provisions {
+  padding-left: 0.5rem;
+}
+
+.provisions li::marker {
+  color: var(--color-sky);
+  font-weight: 700;
+}
+
+.signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid #d9cdb9;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .distanceTable {
+    font-size: 0.85rem;
+    table-layout: fixed;
+  }
+
+  .distanceTable th,
+  .distanceTable td {
+    padding: 0.75rem 0.4rem;
+    overflow-wrap: anywhere;
+  }
+
+  .distanceTable th:first-child {
+    width: 40%;
+  }
+
+  .styleCard {
+    padding: 1.25rem;
   }
 }

@@ -26,11 +26,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className={styles.about}>
-        <div className={styles.container}>
-          <h2>{homeT.about.title[lang]}</h2>
-          <p>{homeT.about.description[lang]}</p>
+      <section className={styles.introduction} aria-labelledby="community-heading">
+        <div className={styles.introductionContent}>
+          <h2 id="community-heading">{homeT.introduction.title[lang]}</h2>
+          {homeT.introduction.paragraphs[lang].map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <Link href="/about/" className={styles.aboutLink}>
+            {homeT.introduction.link[lang]}
+          </Link>
         </div>
       </section>
 
