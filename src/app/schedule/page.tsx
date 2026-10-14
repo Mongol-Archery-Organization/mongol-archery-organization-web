@@ -37,11 +37,7 @@ export default function SchedulePage() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1>{scheduleT.pageTitle[lang]}</h1>
-          <p>
-            {lang === 'en'
-              ? 'Join us for Sunday practice sessions at our Rockville location.'
-              : 'Бидэнтэй Ням гарагийн сургалтын сешнүүдэд оролцоорой.'}
-          </p>
+          <p>{scheduleT.subtitle[lang]}</p>
         </div>
       </section>
 

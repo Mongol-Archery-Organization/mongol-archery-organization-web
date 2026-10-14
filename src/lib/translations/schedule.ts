@@ -1,11 +1,15 @@
 export const scheduleT = {
   pageTitle: {
     en: 'Practice Schedule',
-    mn: 'Сургалтын хуваарь',
+    mn: 'Бэлтгэлийн хуваарь',
+  },
+  subtitle: {
+    en: 'Join Us for Our Next Practice Session',
+    mn: 'Дараагийн бэлтгэлд бидэнтэй нэгдээрэй!',
   },
   upcomingSessions: {
     en: 'Upcoming Sessions',
-    mn: 'Ирээдүйн сургалтууд',
+    mn: 'Удахгүй болох бэлтгэлүүд',
   },
   pagination: {
     label: { en: 'Schedule pages', mn: 'Хуваарийн хуудас' },
