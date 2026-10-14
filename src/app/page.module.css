@@ -5,9 +5,9 @@
 .hero {
   background: linear-gradient(135deg, var(--color-sky) 0%, #004994 100%);
   color: white;
-  padding: 6rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   text-align: center;
-  min-height: 60vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,33 +73,45 @@
   color: var(--color-sky);
 }
 
-.about {
-  background-color: var(--color-steppe);
-  padding: 4rem 1.5rem;
+.introduction {
+  background: var(--color-steppe);
+  padding: 3rem 1.5rem;
 }
 
-.about h2 {
-  text-align: center;
+.introductionContent {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.introductionContent p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.introductionContent h2 {
   color: var(--color-sky);
+  text-align: center;
   margin-bottom: 1.5rem;
 }
 
-.about p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--color-dark);
+.aboutLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-gold);
 }
 
 .quickLinks {
-  padding: 4rem 1.5rem;
+  background: white;
+  padding: 3rem 1.5rem;
 }
 
 .quickLinks h2 {
   text-align: center;
   color: var(--color-sky);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -114,8 +126,10 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: white;
-  border: 1px solid #ddd;
+  border: 1px solid #e5ded2;
   padding: 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
@@ -140,6 +154,7 @@
 }
 
 .card a {
+  margin-top: auto;
   color: var(--color-gold);
   font-weight: 600;
   transition: color 0.3s ease;
@@ -163,7 +178,7 @@
     font-size: 1rem;
   }
 
-  .about,
+  .introduction,
   .quickLinks {
     padding: 2.5rem 1rem;
   }
@@ -172,4 +187,5 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
 }
