@@ -20,7 +20,7 @@ export const homeT = {
   introduction: {
     title: {
       en: 'Our Community',
-      mn: 'Манай хамт олон',
+      mn: 'Бидний нэгдэл',
     },
     paragraphs: {
       en: [
