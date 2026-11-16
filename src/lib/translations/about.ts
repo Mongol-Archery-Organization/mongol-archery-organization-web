@@ -53,34 +53,20 @@ export const aboutT = {
       },
     },
   },
-  history: {
-    heading: {
-      en: 'Our History',
-      mn: 'Манай түүх',
-    },
-    content: {
-      en: 'Mongol Archery Group was established in May 2015 to promote and preserve traditional Mongolian archery outside Mongolia.',
-      mn: 'Mongol Archery Group нь Монголын уламжлалт сур харвааг Монгол Улсаас гадна сурталчлан таниулах, хадгалан хамгаалах зорилгоор 2015 оны 5 дугаар сард байгуулагдсан.',
-    },
+  gallery: {
+    heading: { en: 'Gallery', mn: 'Зургийн цомог' },
   },
-  disciplines: {
-    heading: {
-      en: 'What We Practice',
-      mn: 'Бид юугаар хичээллэдэг вэ',
-    },
-    // TODO: Add the group's practice details when the content is ready.
-    placeholder: { en: 'TODO', mn: 'TODO' },
+  sponsors: {
+    heading: { en: 'Sponsors', mn: 'Ивээн тэтгэгчид' },
+  },
+  leadership: {
+    heading: { en: 'Founders and Board', mn: 'Үүсгэн байгуулагчид ба удирдах зөвлөл' },
   },
   join: {
     heading: {
       en: 'How to Join',
       mn: 'Хэрхэн нэгдэх вэ',
     },
-    content: {
-      en: 'Find upcoming practice times and locations on our schedule, and connect with Mongol Archers on Facebook.',
-      mn: 'Манай хуваариас сургалтын цаг, байршлыг үзэж, Facebook дэх Mongol Archers бүлгээр бидэнтэй холбогдоорой.',
-    },
-    scheduleLink: { en: 'View practice schedule →', mn: 'Сургалтын хуваарь үзэх →' },
     facebook: {
       en: 'Facebook:',
       mn: 'Facebook:',

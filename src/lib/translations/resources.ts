@@ -9,9 +9,31 @@ export const resourcesT = {
       mn: 'Хэрхэн эхлэх вэ?',
     },
     content: {
-      en: 'Getting Started context: TODO',
-      mn: 'Хэрхэн эхлэх вэ? context: TODO',
+      en: 'New to traditional Mongolian archery? Start here to prepare for your first practice.',
+      mn: 'Монголын уламжлалт сур харваагаар анх хичээллэх гэж байна уу? Эхний бэлтгэлдээ дараах байдлаар бэлдээрэй.',
     },
+    steps: [
+      {
+        title: { en: 'Review safety first', mn: 'Эхлээд аюулгүй байдлын заавартай танилцаарай' },
+        content: { en: 'Learn the range signals, equipment checks, and rules before you visit. At practice, receive the safety briefing and follow the instructor or range judge’s directions.', mn: 'Ирэхээсээ өмнө зурхайн дохио, хэрэгслийн шалгалт, дүрэмтэй танилцаарай. Бэлтгэл дээр аюулгүй байдлын зааварчилгаа авч, багш эсвэл зурхайн шүүгчийн зааврыг дагана.' },
+        href: '/resources/#safety', link: { en: 'Read the safety guide', mn: 'Аюулгүй байдлын зааврыг унших' },
+      },
+      {
+        title: { en: 'Get to know the equipment', mn: 'Хэрэгслээ таньж мэдээрэй' },
+        content: { en: 'Explore the bow, arrow, thumb protection, and targets. Ask the group about suitable equipment and what to bring before your first visit.', mn: 'Нум, сум, эрхийвч, бай суртай танилцаарай. Анх ирэхээсээ өмнө тохирох хэрэгсэл болон юу авчрах талаар бүлгээс асуугаарай.' },
+        href: '/resources/#equipment', link: { en: 'Explore the equipment guide', mn: 'Хэрэгслийн гарын авлагыг үзэх' },
+      },
+      {
+        title: { en: 'Check the practice schedule', mn: 'Бэлтгэлийн хуваарийг шалгаарай' },
+        content: { en: 'Check the date, time, location, and session status before setting out. Outdoor practice depends on the weather, so confirm any changes with the group.', mn: 'Гарахаасаа өмнө өдөр, цаг, байршил, бэлтгэлийн төлөвийг шалгаарай. Гадаах бэлтгэл цаг агаараас хамаардаг тул өөрчлөлт орсон эсэхийг бүлгээс лавлаарай.' },
+        href: '/schedule/', link: { en: 'View upcoming practices', mn: 'Удахгүй болох бэлтгэлүүдийг үзэх' },
+      },
+      {
+        title: { en: 'Check in when you arrive', mn: 'Ирээд зохион байгуулагчтай уулзаарай' },
+        content: { en: 'Let the instructor know it is your first visit. Ask where to wait, have your equipment checked, and wait for permission before entering the shooting area or handling a bow.', mn: 'Анх удаа ирж байгаагаа багшид хэлээрэй. Хаана хүлээхээ асууж, хэрэгслээ шалгуулан, харвааны талбайд орох эсвэл нумтай харьцахын өмнө зөвшөөрөл аваарай.' },
+      },
+    ],
+    membership: { en: 'Learn about joining the group', mn: 'Гишүүнээр элсэх талаар мэдэх' },
   },
   introduction: {
     heading: {
@@ -59,12 +81,12 @@ export const resourcesT = {
         paragraphs: {
           en: [
             'In Khalkh archery, men shoot from a distance of 75 meters, while women shoot from 65 meters.',
-            'The target consists of 20 individual leather cylinders, divided into two sections. The 10 cylinders on one side are called khana, while the 10 on the other side are called khasaa.',
+            'Sur targets are placed in a marked target area called the zurkhai. Khana and khasaa are distinct target arrangements, with separate scoring provisions.',
             'Archers take turns shooting four arrows and compete according to the scoring rules.',
           ],
           mn: [
             'Халх сурын харваанд эрэгтэйчүүд 75 метр, эмэгтэйчүүд 65 метрийн зайнаас харвана.',
-            'Бай нь нийт 20 ширхэг сураас бүрдэх бөгөөд тэдгээрийг хоёр хэсэгт хуваан байрлуулдаг. Нэг талд байрлах 10 сурыг “хана”, нөгөө талын 10 сурыг “хасаа” гэж нэрлэдэг.',
+            'Бай сурыг зурхай хэмээх тэмдэглэсэн талбайд өрж байрлуулна. Хана, хасаа нь оноо тооцох тусгай заалттай ялгаатай өрөлтүүд юм.',
             'Харваачид ээлжлэн дөрвөн сум тавьж, онооны журмын дагуу өрсөлдөнө.',
           ],
         },
@@ -77,8 +99,8 @@ export const resourcesT = {
           mn: '65 метр',
         },
         dimensions: {
-          en: 'Each leather target measures 8 cm in length and 5 cm in width. A total of 20 targets are used.',
-          mn: 'Нэг сурын урт 8 см, өргөн 5 см. Нийт 20 сур.',
+          en: 'An individual khasaa target is 8 cm high and 8 cm across. See the Equipment Guide for an illustrated overview.',
+          mn: 'Нэг хасаа сур 8 см өндөр, 8 см өргөнтэй. Дүрслэлийг хэрэгслийн гарын авлагаас үзээрэй.',
         },
       },
       {
@@ -189,78 +211,6 @@ export const resourcesT = {
     signatureName: {
       en: 'N. BAGABANDI',
       mn: 'Н. БАГАБАНДИ',
-    },
-  },
-  cultural: {
-    heading: {
-      en: 'Cultural Significance',
-      mn: 'Соёлын ач холбогдол',
-    },
-    content: {
-      en: 'Cultural Significance context: TODO',
-      mn: 'Соёлын ач холбогдол context: TODO',
-    },
-  },
-  equipment: {
-    heading: {
-      en: 'Equipment Guide',
-      mn: 'Тоног төхөөрөмжийн гарын авлага',
-    },
-    bow: {
-      heading: {
-        en: 'The Mongolian Bow (Нум)',
-        mn: 'Монгол нум',
-      },
-      content: {
-        en: 'The Mongolian Bow context: TODO',
-        mn: 'Монгол нум context: TODO',
-      },
-    },
-    arrows: {
-      heading: {
-        en: 'Arrows (Сум)',
-        mn: 'Сум',
-      },
-      content: {
-        en: 'Arrows context: TODO',
-        mn: 'Сум context: TODO',
-      },
-    },
-    thumbRing: {
-      heading: {
-        en: 'Thumb Ring (Erkhiivch/Эрхийвч)',
-        mn: 'Эрхийвч',
-      },
-      content: {
-        en: 'Thumb Ring context: TODO',
-        mn: 'Эрхийвч context: TODO',
-      },
-    },
-  },
-  techniques: {
-    heading: {
-      en: 'Shooting Techniques',
-      mn: 'Буудлагын техник',
-    },
-    draw: {
-      heading: {
-        en: 'Mongolian Draw',
-        mn: 'Монгол нум тaтax арга',
-      },
-      content: {
-        en: 'Mongolian Draw context: TODO',
-        mn: 'Монгол нум тaтax арга context: TODO',
-      },
-    },
-    stance: {
-      heading: {
-        en: 'Stance and Form',
-        mn: 'Биеийн зогсолт ба харвааны хэлбэр',
-      },
-      content: {
-        en: 'Stance and Form context: TODO',
-        mn: 'Биеийн зогсолт ба харвааны хэлбэр context: TODO',
-      },
     },
   },
 } as const;

@@ -3,6 +3,7 @@ export const commonT = {
     home: { en: 'Home', mn: 'Нүүр хуудас' },
     about: { en: 'About Us', mn: 'Бидний тухай' },
     schedule: { en: 'Schedule', mn: 'Хуваарь' },
+    donate: { en: 'Donate', mn: 'Хандив' },
     resources: { en: 'Resources', mn: 'Эх сурвалж' },
   },
   status: {

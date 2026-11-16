@@ -52,6 +52,8 @@
   position: sticky;
   top: 120px;
   height: fit-content;
+  max-height: calc(100dvh - 120px);
+  overflow-y: auto;
   flex-shrink: 0;
 }
 
@@ -237,6 +239,7 @@
     width: auto;
     padding: 0 1rem 1rem;
     position: static;
+    max-height: none;
   }
 
   .sidebar.mobileOpen {
@@ -408,3 +411,11 @@
     padding: 1.25rem;
   }
 }
+
+.startSteps { list-style: none; counter-reset: first-visit; margin: 2rem 0; padding: 0; }
+.startSteps li { counter-increment: first-visit; position: relative; padding: 0 0 1.75rem 3.25rem; margin-bottom: 1.75rem; border-bottom: 1px solid #e4dbcd; }
+.startSteps li::before { content: counter(first-visit, decimal-leading-zero); position: absolute; left: 0; top: 0; font-size: 0.95rem; font-weight: 700; color: var(--color-sky); background: var(--color-steppe); border-radius: 50%; width: 2.25rem; height: 2.25rem; display: grid; place-items: center; }
+.startSteps h3 { font-size: 1.25rem; line-height: 1.5; margin-bottom: 0.65rem; }
+.startSteps p { margin-bottom: 0.5rem; }
+.startSteps a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+@media (max-width: 480px) { .startSteps li { padding-left: 2.75rem; } .startSteps h3 { font-size: 1.15rem; } }

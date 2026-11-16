@@ -43,6 +43,11 @@ export default function SchedulePage() {
 
       <section className={styles.content}>
         <div className={styles.container}>
+          <aside className={styles.weatherNotice} aria-labelledby="weather-heading">
+            <h2 id="weather-heading">{scheduleT.weatherHeading[lang]}</h2>
+            <p>{scheduleT.weatherNotice[lang]}</p>
+            <a href="https://www.facebook.com/groups/mongolarchers">{scheduleT.weatherLink[lang]} →</a>
+          </aside>
           <h2 ref={headingRef} id="upcoming-sessions" tabIndex={-1}>{scheduleT.upcomingSessions[lang]}</h2>
           <p className={styles.pageSummary} role="status">
             {sessions.length === 0

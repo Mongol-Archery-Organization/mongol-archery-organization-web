@@ -1,34 +1,42 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { useLang } from '@/context/LangContext';
 import { resourcesT } from '@/lib/translations';
 import styles from './page.module.css';
+import { Education } from '@/components/Education/Education';
+import { educationT } from '@/lib/translations/education';
 
-type Section = 'introduction' | 'equipment' | 'techniques' | 'getting' | 'cultural' | 'decree';
+type Section = 'introduction' | 'equipment' | 'getting' | 'decree' | 'safety' | 'scoring';
 
 const sections: { id: Section; labelKey: string }[] = [
   { id: 'getting', labelKey: 'getting' },
   { id: 'introduction', labelKey: 'introduction' },
   { id: 'decree', labelKey: 'decree' },
-  { id: 'cultural', labelKey: 'cultural' },
+  { id: 'safety', labelKey: 'safety' },
   { id: 'equipment', labelKey: 'equipment' },
-  { id: 'techniques', labelKey: 'techniques' },
+  { id: 'scoring', labelKey: 'scoring' },
 ];
 
 export default function ResourcesPage() {
   const { lang } = useLang();
-  const [activeSection, setActiveSection] = useState<Section>('introduction');
+  const [activeSection, setActiveSection] = useState<Section>('getting');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const focusContent = useRef<Section | null>(null);
 
   useEffect(() => {
     const syncSection = () => {
-      const section = sections.find((item) => `#${item.id}` === window.location.hash);
+      const hash = window.location.hash;
+      if (hash.startsWith('#equipment-')) {
+        setActiveSection('equipment');
+        setMobileMenuOpen(false);
+        focusContent.current = null;
+        return;
+      }
+      const section = sections.find((item) => `#${item.id}` === hash);
       focusContent.current = section?.id ?? null;
-      setActiveSection(section?.id ?? 'introduction');
+      setActiveSection(section?.id ?? 'getting');
       setMobileMenuOpen(false);
     };
     syncSection();
@@ -41,6 +49,9 @@ export default function ResourcesPage() {
   }, []);
 
   useEffect(() => {
+    if (activeSection === 'equipment' && window.location.hash.startsWith('#equipment-')) {
+      document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ block: 'start' });
+    }
     if (focusContent.current === activeSection) {
       contentRef.current?.focus({ preventScroll: true });
       contentRef.current?.scrollIntoView({ block: 'start' });
@@ -51,10 +62,10 @@ export default function ResourcesPage() {
   const getNavLabel = (labelKey: string): string => {
     const labels: Record<Section, string> = {
       introduction: resourcesT.introduction.heading[lang],
-      equipment: resourcesT.equipment.heading[lang],
-      techniques: resourcesT.techniques.heading[lang],
+      equipment: educationT.equipmentHeading[lang],
+      safety: educationT.safetyHeading[lang],
+      scoring: educationT.scoringHeading[lang],
       getting: resourcesT.getting.heading[lang],
-      cultural: resourcesT.cultural.heading[lang],
       decree: resourcesT.decree.heading[lang],
     };
     return labels[labelKey as Section] || '';
@@ -77,8 +88,8 @@ export default function ResourcesPage() {
           <h1>{resourcesT.pageTitle[lang]}</h1>
           <p>
             {lang === 'en'
-              ? 'Learn about traditional Mongolian archery, techniques, and equipment.'
-              : 'Уламжлалт Монгол нумын сум, техник болон тоног төхөөрөмжийн тухай сурагдаж авах.'}
+              ? 'Learn about traditional Mongolian archery, equipment, safety, and scoring.'
+              : 'Монголын уламжлалт сур харваа, хэрэгсэл, аюулгүй байдал, оноо тооцох журмын талаар мэдэж аваарай.'}
           </p>
         </div>
       </section>
@@ -189,43 +200,8 @@ export default function ResourcesPage() {
             </article>
           )}
 
-          {/* Equipment Guide */}
-          {activeSection === 'equipment' && (
-            <article className={styles.section}>
-              <h2>{resourcesT.equipment.heading[lang]}</h2>
-
-              <div className={styles.subsection}>
-                <h3>{resourcesT.equipment.bow.heading[lang]}</h3>
-                <p>{resourcesT.equipment.bow.content[lang]}</p>
-              </div>
-
-              <div className={styles.subsection}>
-                <h3>{resourcesT.equipment.arrows.heading[lang]}</h3>
-                <p>{resourcesT.equipment.arrows.content[lang]}</p>
-              </div>
-
-              <div className={styles.subsection}>
-                <h3>{resourcesT.equipment.thumbRing.heading[lang]}</h3>
-                <p>{resourcesT.equipment.thumbRing.content[lang]}</p>
-              </div>
-            </article>
-          )}
-
-          {/* Techniques */}
-          {activeSection === 'techniques' && (
-            <article className={styles.section}>
-              <h2>{resourcesT.techniques.heading[lang]}</h2>
-
-              <div className={styles.subsection}>
-                <h3>{resourcesT.techniques.draw.heading[lang]}</h3>
-                <p>{resourcesT.techniques.draw.content[lang]}</p>
-              </div>
-
-              <div className={styles.subsection}>
-                <h3>{resourcesT.techniques.stance.heading[lang]}</h3>
-                <p>{resourcesT.techniques.stance.content[lang]}</p>
-              </div>
-            </article>
+          {(activeSection === 'equipment' || activeSection === 'safety' || activeSection === 'scoring') && (
+            <Education topic={activeSection} />
           )}
 
           {/* Getting Started */}
@@ -233,21 +209,19 @@ export default function ResourcesPage() {
             <article className={styles.section}>
               <h2>{resourcesT.getting.heading[lang]}</h2>
               <p>{resourcesT.getting.content[lang]}</p>
+              <ol className={styles.startSteps}>
+                {resourcesT.getting.steps.map(step => <li key={step.title.en}>
+                  <h3>{step.title[lang]}</h3>
+                  <p>{step.content[lang]}</p>
+                  {'href' in step && <a href={step.href}>{step.link[lang]} →</a>}
+                </li>)}
+              </ol>
               <p className={styles.highlight}>
-                {lang === 'en' ? 'Visit our ' : 'Манай '}
-                <Link href="/schedule/">{lang === 'en' ? 'Schedule' : 'Хуваарь'}</Link>
-                {lang === 'en' ? ' page to find practice times and locations.' : ' хуудсыг үзэх.'}
+                <a href="/about/#how-to-join">{resourcesT.getting.membership[lang]} →</a>
               </p>
             </article>
           )}
 
-          {/* Cultural Significance */}
-          {activeSection === 'cultural' && (
-            <article className={styles.section}>
-              <h2>{resourcesT.cultural.heading[lang]}</h2>
-              <p>{resourcesT.cultural.content[lang]}</p>
-            </article>
-          )}
         </div>
       </section>
     </div>

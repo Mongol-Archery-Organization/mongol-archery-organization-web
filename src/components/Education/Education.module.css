@@ -1,0 +1,37 @@
+.article { max-width: 680px; margin-bottom: 3rem; }
+.article h2 { color: var(--color-sky); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.5rem; }
+.article h3 { font-size: 1.35rem; line-height: 1.4; margin-bottom: 0.8rem; }
+.article p, .article li { line-height: 1.8; }
+.block { margin: 2.5rem 0; padding-top: 1.5rem; border-top: 1px solid #e4dbcd; scroll-margin-top: 140px; }
+.notice { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border-left: 3px solid var(--color-gold); border-radius: 0.35rem; background: var(--color-steppe); line-height: 1.8; }
+.notice a { font-weight: 600; }
+.quickLinks { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
+.quickLinks a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.5rem 0.8rem; border: 1px solid #d9cdb9; border-radius: 0.35rem; font-size: 0.9rem; }
+.quickLinks a:hover { background: var(--color-steppe); color: var(--color-sky); }
+.figure { margin: 1.5rem 0; border: 1px solid #e4dbcd; border-radius: 0.5rem; padding: 1rem; background: white; }
+.figure a { display: block; }
+.figure img { width: 100%; height: auto; object-fit: contain; }
+.figure figcaption { padding-top: 0.85rem; font-size: 0.85rem; line-height: 1.6; color: var(--color-muted); }
+.figure img { border-radius: 0.25rem; }
+.artLabel { display: block; margin-bottom: 0.3rem; color: var(--color-sky); font-size: 0.75rem; font-weight: 600; }
+.parts { padding: 1rem 1.25rem; background: var(--color-steppe); border-radius: 0.35rem; }
+.parts summary { cursor: pointer; min-height: 44px; padding: 0.5rem 0; font-weight: 600; color: var(--color-sky); }
+.parts ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1rem; margin: 0.75rem 0 0; list-style: none; }
+.parts li { font-size: 0.95rem; margin: 0; }
+.checklist { margin-left: 1.25rem; }
+.checklist li { padding-left: 0.25rem; margin-bottom: 1rem; }
+.checklist li::marker { color: var(--color-sky); }
+.rules { margin: 2rem 0 2rem 1.6rem; }
+.rules li { padding: 0 0 1.5rem 0.6rem; margin-bottom: 1.5rem; border-bottom: 1px solid #e4dbcd; }
+.rules li::marker { font-weight: 700; color: var(--color-sky); }
+.rules p { margin-bottom: 0; }
+.scope { color: var(--color-muted); font-size: 0.95rem; }
+.relatedLink { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 640px) {
+  .parts ul { grid-template-columns: 1fr; }
+  .notice, .parts { padding: 1rem; }
+  .figure { padding: 0.75rem; }
+  .article h3 { font-size: 1.2rem; }
+  .block { scroll-margin-top: 100px; }
+}
