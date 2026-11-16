@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLang } from '@/context/LangContext';
@@ -10,6 +11,7 @@ import styles from './Nav.module.css';
 export function Nav() {
   const { lang, setLang } = useLang();
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={styles.nav}>
@@ -27,31 +29,20 @@ export function Nav() {
           </span>
         </Link>
 
-        <div className={styles.links}>
-          <Link
-            href="/"
-            className={pathname === '/' ? styles.activeLink : styles.link}
-          >
-            {commonT.nav.home[lang]}
-          </Link>
-          <Link
-            href="/about/"
-            className={pathname === '/about/' ? styles.activeLink : styles.link}
-          >
-            {commonT.nav.about[lang]}
-          </Link>
-          <Link
-            href="/schedule/"
-            className={pathname === '/schedule/' ? styles.activeLink : styles.link}
-          >
-            {commonT.nav.schedule[lang]}
-          </Link>
-          <Link
-            href="/resources/"
-            className={pathname === '/resources/' ? styles.activeLink : styles.link}
-          >
-            {commonT.nav.resources[lang]}
-          </Link>
+        <button type="button" className={styles.menuToggle} aria-expanded={menuOpen}
+          aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
+          {lang === 'en' ? (menuOpen ? 'Close' : 'Menu') : (menuOpen ? 'Хаах' : 'Цэс')}
+          <span aria-hidden="true">{menuOpen ? '−' : '+'}</span>
+        </button>
+        <div id="main-navigation" className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
+          {(['home', 'about', 'schedule', 'resources', 'donate'] as const).map((key) => {
+            const href = key === 'home' ? '/' : `/${key}/`;
+            const active = pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
+            return <Link key={key} href={href} aria-current={active ? 'page' : undefined}
+              className={active ? styles.activeLink : styles.link} onClick={() => setMenuOpen(false)}>
+              {commonT.nav[key][lang]}
+            </Link>;
+          })}
         </div>
 
         <div className={styles.langTabs} role="tablist" aria-label="Language">

@@ -5,12 +5,14 @@ import Link from 'next/link';
 import { useLang } from '@/context/LangContext';
 import { aboutT } from '@/lib/translations';
 import styles from './page.module.css';
+import { Leadership, Membership, CommunitySection } from '@/components/Community/Community';
 
 const sections = [
   { id: 'our-mission', key: 'mission' },
-  { id: 'our-history', key: 'history' },
-  { id: 'what-we-practice', key: 'disciplines' },
+  { id: 'gallery', key: 'gallery' },
   { id: 'how-to-join', key: 'join' },
+  { id: 'founders-and-board', key: 'leadership' },
+  { id: 'sponsors', key: 'sponsors' },
 ] as const;
 
 type Section = (typeof sections)[number]['id'];
@@ -130,18 +132,15 @@ export default function AboutPage() {
               </>
             )}
 
-            {activeSection === 'our-history' && <p>{aboutT.history.content[lang]}</p>}
-
-            {activeSection === 'what-we-practice' && (
-              <p className={styles.placeholder}>{aboutT.disciplines.placeholder[lang]}</p>
+            {(activeSection === 'gallery' || activeSection === 'sponsors') && (
+              <CommunitySection kind={activeSection} />
             )}
+
+            {activeSection === 'founders-and-board' && <Leadership />}
 
             {activeSection === 'how-to-join' && (
               <>
-                <p>{aboutT.join.content[lang]}</p>
-                <Link href="/schedule/" className={styles.textLink}>
-                  {aboutT.join.scheduleLink[lang]}
-                </Link>
+                <Membership />
                 <div className={styles.contact}>
                   <p>
                     <strong>{aboutT.join.facebook[lang]}</strong>{' '}

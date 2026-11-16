@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Traditional Mongolian strung bow and its parts</title>
+  <desc id="desc">An illustrated side view of a traditional Mongolian bow. Number 1 identifies the grip, 2 the limbs, 3 the rigid tips, 4 the string loop knots, 5 the string bridges, 6 the nocks, and 7 the bowstring. Paired parts share the same number.</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#e0ae63"/>
+      <stop offset=".45" stop-color="#b97d39"/>
+      <stop offset="1" stop-color="#754522"/>
+    </linearGradient>
+    <linearGradient id="horn" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#896044"/>
+      <stop offset="1" stop-color="#392c28"/>
+    </linearGradient>
+    <linearGradient id="leather" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#9b643d"/>
+      <stop offset=".55" stop-color="#654029"/>
+      <stop offset="1" stop-color="#3f2b22"/>
+    </linearGradient>
+    <pattern id="wrap" width="9" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M2 0V40" stroke="#dbac6b" stroke-width="1.5" opacity=".55"/>
+    </pattern>
+    <g id="leftEnd">
+      <path d="M66 298 Q117 321 174 320 L205 326 L183 353 Q128 341 69 318Z" fill="url(#horn)" stroke="#173b54" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M77 307 Q125 329 173 330" fill="none" stroke="#c89653" stroke-width="3"/>
+      <path d="M73 300 L76 313" fill="none" stroke="#faf7f0" stroke-width="4"/>
+      <path d="M186 330 L199 333 L203 350 L182 350Z" fill="#c8962a" stroke="#173b54" stroke-width="2.5"/>
+      <path d="M79 315 Q120 330 173 344 Q181 347 177 353 Q171 357 166 351 Q163 347 173 344" fill="none" stroke="#806242" stroke-width="4" stroke-linecap="round"/>
+      <path d="M174 345 L181 352 M169 349 L177 355" stroke="#173b54" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <rect width="1200" height="520" rx="14" fill="#faf7f0"/>
+  <!-- The source silhouette is mirrored around the central grip. -->
+  <path d="M174 321 C248 304 296 231 384 193 C436 170 491 165 548 169 Q600 156 652 169 C709 165 764 170 816 193 C904 231 952 304 1026 321 L1017 348 C945 328 888 255 808 215 C754 190 704 185 650 186 Q600 199 550 186 C496 185 446 190 392 215 C312 255 255 328 183 348Z" fill="url(#wood)" stroke="#173b54" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M198 326 C276 298 317 235 390 202 C444 179 496 176 550 178 M650 178 C704 176 756 179 810 202 C883 235 924 298 1002 326" fill="none" stroke="#f2d29a" stroke-width="3" opacity=".85"/>
+  <path d="M211 329 C282 299 333 239 397 212 M803 212 C867 239 918 299 989 329" fill="none" stroke="#7d4e2c" stroke-width="2" opacity=".75"/>
+  <path d="M548 168 Q600 155 652 168 L650 188 Q600 201 550 188Z" fill="url(#leather)" stroke="#173b54" stroke-width="3"/>
+  <path d="M548 168 Q600 155 652 168 L650 188 Q600 201 550 188Z" fill="url(#wrap)"/>
+  <path d="M550 170 L552 186 M648 170 L646 186" stroke="#c8962a" stroke-width="4"/>
+  <use href="#leftEnd"/>
+  <use href="#leftEnd" transform="translate(1200 0) scale(-1 1)"/>
+  <path d="M177 350 H1023" fill="none" stroke="#173b54" stroke-width="4" stroke-linecap="round"/>
+  <path d="M203 348 H997" fill="none" stroke="#b99b72" stroke-width="1"/>
+  <!-- Numbered leaders preserve the source's part mapping. -->
+  <g fill="none" stroke="#194d70" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M582 86 L600 150"/>
+    <path d="M320 117 L368 185 M880 117 L832 185"/>
+    <path d="M132 232 L122 312 M1068 232 L1078 312"/>
+    <path d="M116 414 L169 358 M1084 414 L1031 358"/>
+    <path d="M266 414 L200 358 M934 414 L1000 358"/>
+    <path d="M49 255 L72 292 M1151 255 L1128 292"/>
+    <path d="M600 435 V362"/>
+  </g>
+  <g fill="#194d70" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" text-anchor="middle">
+    <text x="578" y="72">1</text>
+    <text x="308" y="105">2</text><text x="892" y="105">2</text>
+    <text x="134" y="218">3</text><text x="1066" y="218">3</text>
+    <text x="104" y="455">4</text><text x="1096" y="455">4</text>
+    <text x="280" y="455">5</text><text x="920" y="455">5</text>
+    <text x="43" y="242">6</text><text x="1157" y="242">6</text>
+    <text x="600" y="477">7</text>
+  </g>
+</svg>

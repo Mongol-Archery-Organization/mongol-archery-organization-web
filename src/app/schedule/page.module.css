@@ -94,3 +94,8 @@
     min-width: 40px;
   }
 }
+
+.weatherNotice { margin-bottom: 2.5rem; padding: 1.5rem; background: var(--color-steppe); border-left: 3px solid var(--color-gold); border-radius: 0.35rem; }
+.weatherNotice h2 { font-size: 1.25rem; border: 0; padding: 0; margin-bottom: 0.75rem; }
+.weatherNotice p { line-height: 1.8; margin-bottom: 0.5rem; }
+.weatherNotice a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
